@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+    <title>查询成绩</title>
+    <link rel="icon" href="resources/images/favicon.ico" type="image/x-icon">
+    <script src="resources/js/jquery-1.11.2.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+    <script src="resources/js/common.js"></script>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        footer {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            text-align: center;
+            background-color: #F5F5F5;
+        }
+
+        input {
+            margin-top: 20px;
+        }
+
+        body {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .form-signin {
+            max-width: 330px;
+            padding: 15px;
+            margin: 0 auto;
+        }
+
+        .form-signin .form-signin-heading,
+        .form-signin .checkbox {
+            margin-bottom: 10px;
+        }
+
+        .form-signin .checkbox {
+            font-weight: normal;
+        }
+
+        .form-signin .form-control {
+            position: relative;
+            height: auto;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .form-signin .form-control:focus {
+            z-index: 2;
+        }
+
+        .form-signin input[type="email"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .form-signin input[type="password"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="form-signin">
+        <h1>请使用登录教务网的账号密码登录</h1>
+        <label for="username" class="sr-only">学号或用户名</label>
+        <input type="text" class="form-control" placeholder="学号或用户名...." required autofocus
+               id="username">
+        <label for="password" class="sr-only">Password</label>
+        <input type="text" class="form-control" placeholder="密码...." required id="password">
+        <img id="verifyCode">
+        <input type="text" id="code" class="form-control" placeholder="验证码...." required><br>
+        <button style="margin-top:20px;" class="btn btn-lg btn-primary btn-block" id="loginOld">查询成绩</button>
+    </div>
+</div>
+<footer>
+    Copyright &copy; 2019 @author lxxxxxxy @time 2019年7月3日00:25:42
+</footer>
+</body>
+</html>
