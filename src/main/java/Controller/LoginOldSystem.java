@@ -338,8 +338,8 @@ public class LoginOldSystem {
 //        HttpPost httpPost = new HttpPost("https://https://266d7afcaeb2ff1b22398f0ca30d270c.cqwu.edu.cn/jwmis/SYS/Main_banner.aspx");
 
         //windows平台
-//        String realPath = request.getSession().getServletContext().getRealPath("");
-//        String searchScoreByOldSystem = realPath.substring(0, realPath.indexOf("searchScoreByOldSystem"));
+        String realPath = request.getSession().getServletContext().getRealPath("");
+        String searchScoreByOldSystem = realPath.substring(0, realPath.indexOf("searchScoreByOldSystem"));
 //        String dir = searchScoreByOldSystem + "searchScoreByOldSystem/src/main/webapp/resources/score/";
         //Linux平台
         String dir = "/usr/local/tomcat/webapps/searchScoreByOldSystem/resources/score/";
@@ -347,39 +347,11 @@ public class LoginOldSystem {
         String filep1 = dir + xh2 + ".jpg";
 
 
-//        FileBody bin = new FileBody(new File(filep));
-//
-//        StringBody userName = new StringBody("Scott", ContentType.create(
-//                "text/plain", Consts.UTF_8));
-//        StringBody password = new StringBody("123456", ContentType.create(
-//                "text/plain", Consts.UTF_8));
-//        HttpEntity reqEntity = MultipartEntityBuilder.create()
-//                // 相当于<input type="file" name="file"/>
-//                .addPart("file", bin)
-//
-//                // 相当于<input type="text" name="userName" value=userName>
-//                .addPart("userName", userName)
-//                .addPart("pass", password)
-//                .build();
-//
-//        httpPost.setEntity(reqEntity);
-//        CloseableHttpResponse res1 = httpClient.execute(httpPost);
-////        String result1 = EntityUtils.toString(res1.getEntity(),"windows-1252");
-//        HttpEntity entity = res1.getEntity();
-//        String result1 = EntityUtils.toString(entity);
-//        System.out.println(result1);
-//        if (entity != null) {
-//            // 打印响应长度
-//            System.out.println("Response content length: " + entity.getContentLength());
-//            // 打印响应内容
-//            System.out.println(EntityUtils.toString(entity, Charset.forName("UTF-8")));
-//        }
-//
-//        // 销毁
-//        EntityUtils.consume(entity);
 
-
-        HttpGet getVerifyCode = new HttpGet("https://266d7afcaeb2ff1b22398f0ca30d270c.cqwu.edu.cn/jwmis/xscj/Stu_MyScore_Drawimg.aspx?x=1&h=2&w=" + w + "&xnxq=20180&xn=2018&xq=&rpt=0&rad=1&zfx=0&xh=" + xh);
+        //2018年第一学期
+//        HttpGet getVerifyCode = new HttpGet("https://266d7afcaeb2ff1b22398f0ca30d270c.cqwu.edu.cn/jwmis/xscj/Stu_MyScore_Drawimg.aspx?x=1&h=2&w=" + w + "&xnxq=20180&xn=2018&xq=&rpt=0&rad=1&zfx=0&xh=" + xh);
+        //2018年第二学期
+        HttpGet getVerifyCode = new HttpGet("https://266d7afcaeb2ff1b22398f0ca30d270c.cqwu.edu.cn/jwmis/xscj/Stu_MyScore_Drawimg.aspx?x=1&h=2&w=" + w + "&xnxq=20181&xn=2018&xq=&rpt=0&rad=1&zfx=0&xh=" + xh);
 //        HttpGet getVerifyCode = new HttpGet("https://266d7afcaeb2ff1b22398f0ca30d270c.cqwu.edu.cn/jwmis/xscj/Stu_MyScore_Drawimg.aspx?x=1&h=2&w=818&xnxq=20180&xn=2018&xq=0&rpt=0&rad=2&zfx=0&xh=" + send);
 
 
